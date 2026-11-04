@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.pyc
+node_modules/
+.venv/
+.pipeline.lock
+tmp/
+# Personal document contents and generated artifacts are local by default.
+inbox/*
+!inbox/.gitkeep
+documents/*
+!documents/.gitkeep

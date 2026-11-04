@@ -1,0 +1,7 @@
+pypdf>=5
+pdfplumber>=0.11
+# User-authorized Korean text layers and synthetic test fixtures:
+reportlab>=4
+
+# 외부 의존성: PdfCraft CLI 별도 설치 필요
+# https://github.com/storytold/pdfcraft/releases
