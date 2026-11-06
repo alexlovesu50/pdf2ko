@@ -21,6 +21,8 @@
 
 ## PDF 편집과 게시
 
+한글 PDF는 기본적으로 텍스트 영역만 한글로 바꾼다. 그림과 그림에 포함된 글자는 원본 그대로 보존하며, 사용자가 그림 편집을 요청한 경우에만 지정한 부분을 수정한다.
+
 1. `prepare-edit`로 입력 해시를 기록한다. PDF 편집·합성·저장은 **PdfCraft MCP**에서 수행한다. `tool_search` 또는 `command_list`로 실제 도구와 인자를 확인하고, 연결이나 필수 기능이 없으면 중단 사유를 알린다.
 2. `doc_open`으로 원본을 열어 메모리에서 편집한다. 사용자 요청에 따라 한글 글꼴을 포함한 별도 텍스트 레이어는 ReportLab 등으로 만들 수 있다. 영문 제거, 레이어 삽입, 후보 PDF 저장은 PdfCraft에서 수행한다. 읽기 전용 추출·검증과 바이트를 유지하는 복사·이동은 허용한다.
 3. `doc_save`에 `work/edit-vNNN/candidate.pdf`의 절대 경로를 지정한다. `publish`로 후보를 바이트 변경 없이 `output/<id>-ko-vNNN.pdf`에 복사하고 게시 기록을 `work/edit-vNNN/receipt.json`에 남긴다.
