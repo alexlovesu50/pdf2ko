@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "pdfcraft": {
+      "command": "pdfcraft-cli",
+      "args": ["mcp", "--compact", "--root", "."]
+    }
+  }
+}
